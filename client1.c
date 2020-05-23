@@ -30,7 +30,7 @@ int main() {
     printf("Received on client 1 Server response: %s \n", server_response);
 
     close(client_socket_1);
-//host for client 2
+//host for client 6
 //host server_socket_2 port on 9994
     int server_socket_2;
     server_socket_2 = socket(AF_INET, SOCK_STREAM, 0);

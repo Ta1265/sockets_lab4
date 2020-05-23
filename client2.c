@@ -28,14 +28,14 @@ int main(){
     char server1_message[256] = "Hello message from cleint 2";
     send(client_socket, server1_message, sizeof(server1_message),0);
 
-//connect to client 1
-//connect to server_socket_2 on port 9994
+//connect to client 3
+//connect to server_socket_2 on port 9998
     int client_socket_2;
     client_socket_2 = socket(AF_INET, SOCK_STREAM, 0);
 
     struct sockaddr_in server_address_3;
     server_address_3.sin_family = AF_INET; //connection type
-    server_address_3.sin_port = htons(9994); //port
+    server_address_3.sin_port = htons(9998); //port
     server_address_3.sin_addr.s_addr = INADDR_ANY; //INADDR_ANY is same as 0.0.0.0
 
     int connect_status = connect(client_socket_2, (struct sockaddr *) &server_address_3, sizeof(server_address_3));
